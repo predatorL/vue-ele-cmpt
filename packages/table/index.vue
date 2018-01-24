@@ -3,12 +3,17 @@
         <template v-for="(item, index) in tableProps" :prop="item.prop" :label="item.label" :width="item.width">
             <el-table-column :key="index" v-if="item.filter" :label="item.label" :width="item.width">
                 <template slot-scope="scope">
-                    {{item.filter(scope.row[item.prop])}}
+                    {{item.filter(scope.row[item.prop], scope.row, scope)}}
                 </template>
             </el-table-column>
             <el-table-column :key="index" v-else-if="item.actions" :label="item.label" :width="item.width">
                 <template slot-scope="scope">
-                    <el-button v-for="(action, btnIndex) in item.actions" :key="btnIndex" size="small" type="primary" @click="onClick(action.method, scope.row, scope)" icon="el-icon-edit">{{action.text}}</el-button>
+                    <el-button v-for="(action, btnIndex) in item.actions"
+                        :key="btnIndex" size="small" type="primary"
+                        @click="onClick(action.method, scope.row, scope)"
+                        :icon="action.icon" :title="action.title">
+                        {{action.text}}
+                    </el-button>
                 </template>
             </el-table-column>
             <el-table-column :key="index" v-else :prop="item.prop" :label="item.label" :width="item.width">
