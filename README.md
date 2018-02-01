@@ -25,9 +25,9 @@ Register the component
 
 ```js
 import Vue from 'vue'
-import cmptInstall from 'vue-ele-cmpt'
-// prefix: 组件前缀　例如 l-table 
-cmptInstall(Vue, {prefix: 'l'})
+import cmpt from 'vue-ele-cmpt'
+// prefix: 组件前缀　例如 l-table
+cmpt.install(Vue, {prefix: 'l'})
 ```
 
 ## Basic Usage
