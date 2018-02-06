@@ -7,6 +7,7 @@
                         :key="btnIndex" size="small" type="primary"
                         @click="onClick(action.method, scope.row, scope)"
                         :icon="action.icon">
+                        {{action.text}}
                     </el-button>
                 </template>
             </el-table-column>
