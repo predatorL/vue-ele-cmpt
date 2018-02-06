@@ -6,7 +6,7 @@
                     <el-button :title="action.title" v-for="(action, btnIndex) in item.actions"
                         :key="btnIndex" size="small" type="primary"
                         @click="onClick(action.method, scope.row, scope)"
-                        :icon="action.icon">
+                        :icon="action.icon" :class="action.text ? '' : 'no-text'">
                         {{action.text}}
                     </el-button>
                 </template>
