@@ -33,12 +33,16 @@ export default {
         tableData: {
             type: Array,
             required: true,
-            default: []
+            default() {
+                return []
+            }
         },
         tableProps: {
             type: Array,
             required: true,
-            default: []
+            default() {
+                return []
+            }
         }
     },
     data() {
