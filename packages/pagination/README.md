@@ -1,4 +1,4 @@
-# table
+# pagination
 
 封装 el-pagination 组件，通过配置项使用 pagination
 

@@ -1,24 +1,18 @@
 {
-  "name": "vue-ele-cmpt",
-  "version": "1.0.1",
-  "description": "基于饿了么UI封装的组件",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/predatorL/vue-ele-cmpt.git"
-  },
-  "keywords": [
-    "vue",
-    "element-ui",
-    "component"
-  ],
-  "author": "lihaiyang",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/predatorL/vue-ele-cmpt/issues"
-  },
-  "homepage": "https://github.com/predatorL/vue-ele-cmpt#readme"
+    "name": "vue-ele-cmpt",
+    "version": "1.0.2",
+    "description": "基于饿了么UI封装的组件",
+    "main": "index.js",
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/predatorL/vue-ele-cmpt.git"
+    },
+    "keywords": ["vue", "element-ui", "component"],
+    "author": "lihaiyang",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/predatorL/vue-ele-cmpt/issues"
+    },
+    "homepage": "https://github.com/predatorL/vue-ele-cmpt#readme"
 }
