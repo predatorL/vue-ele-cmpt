@@ -1,6 +1,6 @@
 {
   "name": "vue-ele-cmpt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "基于饿了么UI封装的组件",
   "main": "index.js",
   "scripts": {

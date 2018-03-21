@@ -35,11 +35,11 @@ cmpt.install(Vue, {prefix: 'l'})
 - table[说明文档](https://github.com/predatorL/vue-ele-cmpt/blob/master/packages/table/README.md)
 - button[说明文档](https://github.com/predatorL/vue-ele-cmpt/blob/master/packages/button/README.md)
 - echarts[说明文档](https://github.com/predatorL/vue-ele-cmpt/blob/master/packages/echarts/README.md)
-- pagination封装[说明文档](https://github.com/predatorL/vue-ele-cmpt/blob/master/packages/pagination封装/README.md)
+- pagination封装[说明文档](https://github.com/predatorL/vue-ele-cmpt/blob/master/packages/pagination/README.md)
 
 
 #### Setting Options
 具体的看里面的文档吧
 
 
-### For more information, please visit the [vue-select documentation.](https://sagalbot.github.io/vue-select)
+
