@@ -47,7 +47,12 @@ cmpt.install(Vue, { prefix: 'l' })
 
 ## todo list
 *   [] 添加chart的README
-*   [] table添加多选功能
+*   [x] table添加多选功能
 *   [] table添加样式属性应用
 *   [] chart添加图表真实DOM的获取方式
+*   [] table添加图表真实DOM的获取方式
+*   [] table需要添加重新挂载机制，每当props变化时，更新表格显示，　不然会导致props缓存
 
+### 备忘录
+* []　真是dom的那个，可以试试通过$refs的一层层查找试试
+* []　table重新挂载机制那个，可以通过v-if触发下试试

@@ -1,5 +1,7 @@
 <template>
-    <el-table :data="tableData" style="width: 100%">
+    <el-table :data="tableData" style="width: 100%" ＠selection-change="onSelect">
+        <el-table-column v-if="selection" type="selection" width="55">
+        </el-table-column>
         <template v-for="(item, index) in tableProps" >
             <el-table-column :key="index" v-if="item.actions" :label="item.label" :width="item.width">
                 <template slot-scope="scope">
@@ -19,17 +21,22 @@
                 </template>
             </el-table-column>
         </template>
+        <slot name="action" />
     </el-table>
 </template>
 <script>
 export default {
     methods: {
         onClick(...params) {
-            this.$emit('trigger', ...params)
+            this.$emit('action-trigger', ...params)
+        },
+        onSelect(...params) {
+            this.$emit('＠selection-change', ...params)
         }
     },
     mounted() {},
     props: {
+        selection: Boolean,
         tableData: {
             type: Array,
             required: true,

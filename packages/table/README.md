@@ -4,21 +4,28 @@
 
 #### Features
 
-* 简化简单列表配置
-* 封装操作统一触发事件
-* 局部过滤器
+*   简化简单列表配置
+*   封装操作统一触发事件
+*   局部过滤器
 
 ###### Vue Compatibility
 
-* vue2.0 以上
-* element-ui2.0 以上
+*   vue2.0 以上
+*   element-ui2.0 以上
 
 Use the component, demo
 
 ```js
 // prefix: 组件前缀　例如 l-table
 <template>
-    <l-table @trigger="onTrigger"　:tableData="table.data" :tableProps="table.props"/>
+    <div class="demo-container">
+        <!-- 普通版, 按钮通过props定义，时间通过action-trigger发送 -->
+        <l-table @action-trigger="onTrigger" :table-data="table.data" :table-props="table.props" />
+        <!-- 开启多选（添加selection即可），选择变更后会通过selection-change事件被触发，通知父组件 -->
+        <l-table @action-trigger="onTrigger" selection　＠selection-change＝"onSelect"　:table-data="table.data" :table-props="table.props" />
+        <!-- 自定义最后一列 -->
+        <l-table @action-trigger="onTrigger" :table-data="table.data" :table-props="table.props" />
+    </div>
 </template>
 <script>
     export default {
@@ -69,3 +76,24 @@ Use the component, demo
     }
 </script>
 ```
+
+### Table Attributes
+
+| 参数           | 说明                         |  类型   | 可选值 | 默认值 |
+| :------------- | :--------------------------- | :-----: | :----: | :----: |
+| 　 selection   | 是否开启多选择               | boolean |   —    | false  |
+| 　 table-data  | 表格显示的数据               |  array  |   —    |   —    |
+| 　 table-props | 按数组顺序对应列内容的字段名 |  array  |   —    |   —    |
+
+### Table Events
+
+| 事件名              | 说明                                                  |        参数        |
+| :------------------ | :---------------------------------------------------- | :----------------: |
+| 　 action-trigger   | 在 props 中配置的 action 类型按钮被点击，会触发该事件 | method, row, scope |
+| 　 selection-change | 开启多选择后，当选择项发生变化时                      |     selection      |
+
+### Table Slot
+
+| 插槽名    | 说明                                                                | 参数 |
+| :-------- | :------------------------------------------------------------------ | ---- |
+| 　 action | 如果 action 按钮无法满足需求,可以通过具名插槽自定义最后一列操作按钮 | —    |
