@@ -1,5 +1,5 @@
 <template>
-    <el-table :data="tableData" style="width: 100%" ＠selection-change="onSelect">
+    <el-table :data="tableData" style="width: 100%" @selection-change="onSelect">
         <el-table-column v-if="selection" type="selection" width="55">
         </el-table-column>
         <template v-for="(item, index) in tableProps" >
@@ -31,7 +31,7 @@ export default {
             this.$emit('action-trigger', ...params)
         },
         onSelect(...params) {
-            this.$emit('＠selection-change', ...params)
+            this.$emit('selection-change', ...params)
         }
     },
     mounted() {},
