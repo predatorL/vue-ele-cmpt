@@ -1,27 +1,3 @@
-<style>
-.chart-wrapper {
-    position: relative;
-}
-.chart-wrapper .chart {
-    position: relative;
-    z-index: 1;
-}
-.chart-wrapper .no-found {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: 10;
-    background-color: #fff;
-}
-.chart-wrapper .no-found .text {
-    position: absolute;
-    background-color: #fff;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-</style>
-
 <template>
   <div class="chart-wrapper" :style="style">
     <div class="no-found" v-if="noDataVisible">

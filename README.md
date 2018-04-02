@@ -56,3 +56,4 @@ cmpt.install(Vue, { prefix: 'l' })
 ### 备忘录
 * []　真是dom的那个，可以试试通过$refs的一层层查找试试
 * []　table重新挂载机制那个，可以通过v-if触发下试试
+* [x] 自己编译样式的时候记得全局安装less
