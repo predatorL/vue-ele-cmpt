@@ -1,7 +1,7 @@
 {
   "name": "vue-ele-cmpt",
   "version": "1.0.4",
-  "main": "dist/vue-select.js",
+  "main": "dist/ele-cmpt.js",
   "description": "A Vue.js project",
   "author": "lihaiyang <peking_opera@163.com>",
   "private": true,
